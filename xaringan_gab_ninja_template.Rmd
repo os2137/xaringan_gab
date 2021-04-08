@@ -1,0 +1,149 @@
+---
+title: "Presentation Ninja"
+subtitle: "⚔<br/>with xaringan"
+author: "Yihui Xie"
+institute: "RStudio, PBC"
+date: "2016/12/12 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+<!--intentionally left blank-->
+
+---
+class: center, bottom
+background-image: url(pari.jpg)
+background-size: 800px 500px
+background-position: top center
+
+# Knock Knock
+## Who is there?
+
+
+---
+# Hello over here? 
+
+--
+## Banana
+
+
+---
+# We can use background-size: contain or background-size: contain as well. MDN is the best palce to look for various options as these are CSS elements and MDN is a great resoruce for this. 
+
+## get the image from unsplash.com 
+
+### learn markdown in 15 mintutes 
+commonmark.org/help/tutorial
+
+---
+.pull-left[
+stuff goes on left
+]
+
+.pull-right[
+stuff goes on right
+]
+
+
+--- 
+This .purple[Word] is purple.
+
+
+---
+class: middle
+.title[
+The tale of .purple[The Flossy Bunnies]
+]
+
+<style>
+.title{
+font-size: 5em;
+font-style: italic;
+}
+.purple{
+color: purple;
+}
+</style>
+
+
+---
+The _fuzzy_ bunny ran `foo::foo()` and promptly **disappeared**
+
+1. [Onkar](http://onkarsingh.rbind.io/)
+
+1.  Jyoti
+
+1.  Arya
+
+1.  Vivang
+
+
+Check out [xaringanthemer](https://www.garrickadenbuie.com/project/)
+it's pretty &#x1F60E;
+
+![](tenor.gif)
+
+
+---
+[xaringanthemer](https://pkg.garrickadenbuie.com/xaringanthemer/)
+
+```{r}
+library(xaringanthemer)
+```
+
+```{r xaringan-themer, include=FALSE}
+library(xaringanthemer)
+style_mono_light()
+```
+
+[choose colors with colors.co](https://coolors.co/)
+use spacebar to navigate from one color screen to the next. 
+
+
+---
+class: middle
+## Timer slide: Add a timer
+>**Take 4 minutes to discuss with your partner**
+
+```{r include = FALSE}
+# devtools::install_github("gadenbuie/countdown")
+library(countdown)
+```
+
+`r countdown(minutes = 0, seconds = 10, 
+play_sound = TRUE)`
+
+
+---
+# Embedding Xaringan Preesentaion slides
+
+
+
+```{r r embed-xaringan, echo=FALSE}
+xaringanExtra::embed_xaringan(url = "https://os2137.github.io/onkar-slides/onkar-slides.html#1", ratio = "4:3")
+```
+
+
+
+---
+# Fit to Screen option implementation
+
+```{r xaringan-fit-screen, echo=FALSE}
+xaringanExtra::use_fit_screen()
+```
+
+
+
+---
+# Using webcam
+
+```{r echo = FALSE}
+xaringanExtra::use_webcam()
+```
+
+
